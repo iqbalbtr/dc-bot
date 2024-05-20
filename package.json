@@ -1,0 +1,23 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/main.ts",
+    "start": "node dist/main.js",
+    "build": "npx tsc",
+    "serve": "pnpm run build && pnpm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.11.3",
+    "discord.js": "^14.15.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescipt": "^1.0.0"
+  }
+}

@@ -1,0 +1,6 @@
+node_modules
+/dist
+pnpm-lock.yaml
+
+/src/configs/bot.ts
+/src/configs/chanels.ts
