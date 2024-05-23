@@ -4,3 +4,4 @@ pnpm-lock.yaml
 
 /src/configs/bot.ts
 /src/configs/chanels.ts
+/src/configs/gemini.ts

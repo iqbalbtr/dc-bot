@@ -6,11 +6,12 @@ module.exports = {
     name: "tanya",
     description: "Ai powered by gemini google",
     async execute(message: Message){
+        const progerss = await message.reply("Processing..")
         await getAiChat(getPayloadMsg(message), (err, result) => {
-            if(err){
-                message.reply(result || "No Content")
+            if(!err){
+                progerss.edit("Hasil :" + result)
             } else {
-                message.reply(result || "No Content")
+                progerss.edit("Gagal!")
             }
         })
     }
