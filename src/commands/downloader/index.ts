@@ -21,54 +21,54 @@ module.exports = {
         try {
             switch (sc[0]) {
                 case "ig":
-                    const igResult: string = await instagramDownloader(sc[1], status);
-                    const embed = new EmbedBuilder()
+                    const igUrl: string = await instagramDownloader(sc[1], status);
+                    const igEmbed = new EmbedBuilder()
                         .setColor("#db0223")
                         .setTitle("Downlaod Here!")
-                        .setURL(igResult)
-                    if (igResult) {
+                        .setURL(igUrl)
+                    if (igUrl) {
                         status.edit("Success")
-                        status.edit({ embeds: [embed] })
+                        status.edit({ embeds: [igEmbed] })
                     }
                     break;
 
                 case "tt":
-                    const result: string = await tiktokDowloader(sc[1], status);
-                    const embed2 = new EmbedBuilder()
+                    const ttUrl: string = await tiktokDowloader(sc[1], status);
+                    const ttEmbed = new EmbedBuilder()
                         .setColor("#333232")
                         .setTitle("Downlaod Here!")
-                        .setURL(result)
-                    if (result) {
+                        .setURL(ttUrl)
+                    if (ttUrl) {
                         status.edit("Success")
-                        status.edit({ embeds: [embed2] })
+                        status.edit({ embeds: [ttEmbed] })
                     }
                     break;
                 case "fb":
-                    const fbResult: string = await facebookDowloader(sc[1], status);
-                    const embed3 = new EmbedBuilder()
+                    const fbUrl: string = await facebookDowloader(sc[1], status);
+                    const fbEmbed = new EmbedBuilder()
                         .setColor("#00379e")
                         .setTitle("Downlaod Here!")
-                        .setURL(fbResult)
-                    if (fbResult) {
+                        .setURL(fbUrl)
+                    if (fbUrl) {
                         status.edit("Success")
-                        status.edit({ embeds: [embed3], })
+                        status.edit({ embeds: [fbEmbed], })
                     }
                     break;
                 case "yt":
-                    const ytResult = await youtubeDownloader(sc[1], status);
+                    const ytUrl = await youtubeDownloader(sc[1], status);
 
-                    let embedArray: EmbedBuilder[] = [];
+                    let ytEmbedArray: EmbedBuilder[] = [];
                     
-                    if (ytResult) {
+                    if (ytUrl) {
                         status.edit("Success")
-                        Object.values(ytResult).forEach((re: any, i: number) => {
-                            const createEmbed = new EmbedBuilder()
+                        Object.values(ytUrl).forEach((re: any, i: number) => {
+                            const ytAembed = new EmbedBuilder()
                             .setTitle(re.quality)
                             .setURL(re.url)
 
-                            embedArray.push(createEmbed)
+                            ytEmbedArray.push(ytAembed)
                         })
-                        status.edit({embeds: embedArray})
+                        status.edit({embeds: ytEmbedArray})
                     }
                     break;
                 default:
