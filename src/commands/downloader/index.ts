@@ -1,4 +1,4 @@
-import { Attachment, EmbedBuilder, Message } from "discord.js";
+import {  EmbedBuilder, Message } from "discord.js";
 import { getPayloadMsg } from "../../utils/prefix";
 import { tiktokDowloader } from "../../libs/download/tiktok";
 import { instagramDownloader } from "../../libs/download/ig";
